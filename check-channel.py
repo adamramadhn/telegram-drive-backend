@@ -34,7 +34,8 @@ with client:
     channel_id_from_env = int(os.getenv("TELEGRAM_CHANNEL_ID"))
 
     # Get all dialogs
-    for dialog in client.iter_dialogs():
+    dialogs = client.get_dialogs()
+    for dialog in dialogs:
         # Check if chat is channel or supergroup
         if dialog.chat.type in ["channel", "supergroup"]:
             chat = dialog.chat
