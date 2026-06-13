@@ -9,11 +9,15 @@ from fastapi.responses import FileResponse, JSONResponse
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import SessionPasswordNeeded
+from dotenv import load_dotenv
 import aiofiles
 import shutil
 from datetime import datetime
 import tempfile
 import logging
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
