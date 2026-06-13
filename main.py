@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from pyrogram.errors import SessionPasswordNeededError
+from pyrogram.errors import SessionPasswordNeeded
 import aiofiles
 import shutil
 from datetime import datetime
